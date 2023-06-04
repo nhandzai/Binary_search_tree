@@ -52,8 +52,31 @@ int MinValue(Node *root)
 
     return min(root->data, min(right, left));
 }
+bool checkBST(Node *root)
+{
+    if (root == NULL)
+        return true;
+
+    if (root->data < MaxValue(root->left))
+        return false;
+    else if (root->data > MinValue(root->right))
+        return false;
+    else if (!checkBST(root->left) || !checkBST(root->right))
+        return false;
+    return true;
+}
 int main()
 {
+    Tree t;
+    t.root = new Node(6);
+    t.root->left = new Node(3);
+    t.root->left->left = new Node(1);
+    t.root->right = new Node(8);
+    t.root->right->left = new Node(7);
 
+    if (checkBST(t.root))
+        cout << "true";
+    else
+        cout << "false";
     return 0;
 }
