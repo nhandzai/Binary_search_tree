@@ -89,13 +89,14 @@ void LTR(Node *root)
 int main()
 {
     Tree t;
-    addNode(t.root, 5);
-    addNode(t.root, 2);
+    addNode(t.root, 8);
     addNode(t.root, 7);
-    addNode(t.root, 3);
+    addNode(t.root, 2);
+    addNode(t.root, 10);
     addNode(t.root, 9);
+    addNode(t.root, 13);
 
-    deleteNode(t.root, 5);
+    deleteNode(t.root, 8);
     LTR(t.root);
     return 0;
 }
