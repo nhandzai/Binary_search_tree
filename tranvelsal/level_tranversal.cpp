@@ -60,7 +60,9 @@ void printTreeLV(Node *root)
 {
     for (int i = 0; i < getHight(root); i++)
     {
+        cout << "Lv " << i << ": ";
         printNode(root, i);
+        cout << "\n";
     }
 }
 
