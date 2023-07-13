@@ -63,7 +63,7 @@ int main()
     for (int i = 0; i < sizeof(a) / sizeof(int); i++)
         addNode(t.root, a[i]);
 
-    Node *result = LCA(t.root, 1, 4);
+    Node *result = LCA(t.root, 6,12);
     cout << result->data;
     return 0;
 }

@@ -65,6 +65,6 @@ int main()
     addNode(t.root, 3);
     addNode(t.root, 9);
 
-    TLR(t.root);
+    LTR(t.root);
     return 0;
 }
